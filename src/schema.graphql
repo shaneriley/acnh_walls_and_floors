@@ -26,6 +26,7 @@ type AuthPayload {
 
 type Query {
   info: String!
+  version: String!
   walls: [Wall!]!
   floors: [Floor!]!
 }
