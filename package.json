@@ -1,0 +1,22 @@
+{
+  "name": "acnh_walls_and_floors",
+  "version": "1.0.0",
+  "description": "Animal Crossing: New Horizons walls and floors collection management",
+  "main": "src/index.js",
+  "author": "Shane Riley",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "nodemon",
+    "start:production": "node src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "prisma-client-lib": "^1.34.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

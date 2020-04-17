@@ -1,0 +1,39 @@
+type Wall {
+  id: ID!
+  name: String!
+  createdBy: User
+}
+
+type Floor {
+  id: ID!
+  name: String!
+  createdBy: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  password: String!
+  walls: [Wall!]!
+  floors: [Floor!]!
+}
+
+type AuthPayload {
+  token: String
+  user: User
+}
+
+type Query {
+  info: String!
+  walls: [Wall!]!
+  floors: [Floor!]!
+}
+
+type Mutation {
+  signup(email: String!, password: String!, name: String!): AuthPayload
+  login(email: String!, password: String!): AuthPayload
+  postWall(name: String!): Wall!
+  postFloor(name: String!): Floor!
+}
+

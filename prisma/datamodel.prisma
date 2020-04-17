@@ -1,0 +1,20 @@
+type Wall {
+  id: ID! @id
+  name: String!
+  createdBy: User
+}
+
+type Floor {
+  id: ID! @id
+  name: String!
+  createdBy: User
+}
+
+type User {
+  id: ID! @id
+  name: String!
+  email: String! @unique
+  password: String!
+  walls: [Wall!]!
+  floors: [Floor!]!
+}
